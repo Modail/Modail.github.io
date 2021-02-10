@@ -252,6 +252,13 @@
 
               <time title="Created: 2021-01-24 22:55:13" itemprop="dateCreated datePublished" datetime="2021-01-24T22:55:13+08:00">2021-01-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-10 23:27:27" itemprop="dateModified" datetime="2021-02-10T23:27:27+08:00">2021-02-10</time>
+              </span>
 
           
 
@@ -264,7 +271,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>  舍友面试的时候被问到了grid布局的相关内容，他稀稀碎碎地回答了这个问题，面完感觉很不好，我和他交流后，打算系统地总结下grid布局的内容。</p>
+<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Grid 布局与 Flex 布局有一定的相似性，都可以指定容器内部多个项目的位置。但是，它们也存在重大区别。</p>
+<p>Flex 布局是轴线布局，只能指定”项目”针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成”行”和”列”，产生单元格，然后指定”项目所在”的单元格，可以看作是二维布局。Grid 布局远比 Flex 布局强大。</p>
+<h3 id="grid布局几个基本概念"><a href="#grid布局几个基本概念" class="headerlink" title="grid布局几个基本概念"></a>grid布局几个基本概念</h3><h5 id="容器和项目"><a href="#容器和项目" class="headerlink" title="容器和项目"></a>容器和项目</h5><p>采用网格布局的区域，称为”容器”（container）。容器内部采用网格定位的子元素，称为”项目”（item）。注意：项目只能是容器的顶层子元素，不包含项目的子元素</p>
+<h5 id="行和列"><a href="#行和列" class="headerlink" title="行和列"></a>行和列</h5><p>容器里面的水平区域称为”行”（row），垂直区域称为”列”（column）。</p>
+<h5 id="单元格"><a href="#单元格" class="headerlink" title="单元格"></a>单元格</h5><p>行和列的交叉区域，称为”单元格”（cell）。<br>正常情况下，n行和m列会产生n x m个单元格。比如，3行3列会产生9个单元格。</p>
+<h5 id="网格线"><a href="#网格线" class="headerlink" title="网格线"></a>网格线</h5><p>划分网格的线，称为”网格线”（grid line）。水平网格线划分出行，垂直网格线划分出列。</p>
+<h3 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h3><p>Grid 布局的属性分成两类。一类定义在容器上面，称为容器属性；另一类定义在项目上面，称为项目属性</p>
+<h4 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h4><p>display: grid指定一个容器采用网格布局。</p>
+<h4 id="grid-template-columns-属性，"><a href="#grid-template-columns-属性，" class="headerlink" title="grid-template-columns 属性，"></a>grid-template-columns 属性，</h4><p>grid-template-rows 属性<br>grid-template-columns属性定义每一列的列宽，grid-template-rows属性定义每一行的行高。</p>
+<h3 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h3><ol>
+<li></li>
+</ol>
+<ul>
+<li>grid-column-start 属性</li>
+<li>grid-column-end 属性</li>
+<li>grid-row-start 属性</li>
+<li>grid-row-end 属性</li>
+</ul>
+
       
     </div>
 
