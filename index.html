@@ -257,7 +257,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-10 23:27:27" itemprop="dateModified" datetime="2021-02-10T23:27:27+08:00">2021-02-10</time>
+                <time title="Modified: 2021-02-13 23:32:08" itemprop="dateModified" datetime="2021-02-13T23:32:08+08:00">2021-02-13</time>
               </span>
 
           
@@ -279,17 +279,37 @@
 <h5 id="单元格"><a href="#单元格" class="headerlink" title="单元格"></a>单元格</h5><p>行和列的交叉区域，称为”单元格”（cell）。<br>正常情况下，n行和m列会产生n x m个单元格。比如，3行3列会产生9个单元格。</p>
 <h5 id="网格线"><a href="#网格线" class="headerlink" title="网格线"></a>网格线</h5><p>划分网格的线，称为”网格线”（grid line）。水平网格线划分出行，垂直网格线划分出列。</p>
 <h3 id="容器属性"><a href="#容器属性" class="headerlink" title="容器属性"></a>容器属性</h3><p>Grid 布局的属性分成两类。一类定义在容器上面，称为容器属性；另一类定义在项目上面，称为项目属性</p>
-<h4 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h4><p>display: grid指定一个容器采用网格布局。</p>
-<h4 id="grid-template-columns-属性，"><a href="#grid-template-columns-属性，" class="headerlink" title="grid-template-columns 属性，"></a>grid-template-columns 属性，</h4><p>grid-template-rows 属性<br>grid-template-columns属性定义每一列的列宽，grid-template-rows属性定义每一行的行高。</p>
-<h3 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h3><ol>
-<li></li>
-</ol>
-<ul>
-<li>grid-column-start 属性</li>
-<li>grid-column-end 属性</li>
-<li>grid-row-start 属性</li>
-<li>grid-row-end 属性</li>
+<h5 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h5><p>display: grid指定一个容器采用网格布局。</p>
+<h5 id="设置列宽和行宽"><a href="#设置列宽和行宽" class="headerlink" title="设置列宽和行宽"></a>设置列宽和行宽</h5><p>grid-template-columns 属性：定义每一列的列宽<br>grid-template-rows 属性：定义每一行的行高</p>
+<h5 id="设置行间距和列间距"><a href="#设置行间距和列间距" class="headerlink" title="设置行间距和列间距"></a>设置行间距和列间距</h5><p>grid-column-grap属性：设置列间距<br>grid-row-grap属性：设置列间距<br>grid-grap属性(上述的合并形式)：参数为依次为grid-row-grap、grid-column-grap</p>
+<h5 id="grid-template-areas-属性"><a href="#grid-template-areas-属性" class="headerlink" title="grid-template-areas 属性"></a>grid-template-areas 属性</h5><p>网格布局允许指定”区域”（area），一个区域由单个或多个单元格组成。grid-template-areas属性用于定义区域。参数为字符串，例如：grid-template-areas：”header header header”<br>  “main main sidebar”<br>  “footer footer footer”;顶部是页眉区域header，底部是页脚区域footer，中间部分则为main和sidebar。(9个单元格变成了4个区域)</p>
+<h5 id="grid-auto-flow-属性"><a href="#grid-auto-flow-属性" class="headerlink" title="grid-auto-flow 属性"></a>grid-auto-flow 属性</h5><p>划分网格以后，容器的子元素会按照顺序，自动放置在每一个网格。默认的放置顺序是”先行后列”，即先填满第一行，再开始放入第二行，这个顺序由grid-auto-flow属性决定，默认值是row，即”先行后列”。也可以将它设成column，变成”先列后行”。<br>也有其他参数：row dense，表示”先行后列”，并且尽可能紧密填满，尽量不出现空格。<br>column dense，表示”先列后行”，并且尽量填满空格。</p>
+<h5 id="整个容器的布局"><a href="#整个容器的布局" class="headerlink" title="整个容器的布局"></a>整个容器的布局</h5><ul>
+<li>justify-content 属性</li>
+<li>align-content 属性</li>
+<li>place-content 属性(place-content: align-content | justify-content)</li>
 </ul>
+<p>justify-content属性是整个内容区域在容器里面的水平位置（左中右），align-content属性是整个内容区域的垂直位置（上中下）。类似于flex布局的属性，就不多阐述了。</p>
+<h5 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h5><h6 id="1-repeat"><a href="#1-repeat" class="headerlink" title="1.repeat()"></a>1.repeat()</h6><p>有时候，重复写同样的值非常麻烦，尤其网格很多时。这时，可以使用repeat()函数，简化重复的值。repeat()接受两个参数，第一个参数是重复的次数，第二个参数是所要重复的值。</p>
+<h6 id="2-auto-fill"><a href="#2-auto-fill" class="headerlink" title="2.auto-fill"></a>2.auto-fill</h6><p>有时，单元格的大小是固定的，但是容器的大小不确定。如果希望每一行（或每一列）容纳尽可能多的单元格，这时可以使用auto-fill关键字表示自动填充。</p>
+<h6 id="3-fr"><a href="#3-fr" class="headerlink" title="3.fr"></a>3.fr</h6><p>为了方便表示比例关系，网格布局提供了fr关键字（fraction 的缩写，意为”片段”）。1fr表示当前值是前一个值的100%。</p>
+<h6 id="4-minmax"><a href="#4-minmax" class="headerlink" title="4.minmax()"></a>4.minmax()</h6><p>minmax()函数产生一个长度范围，表示长度就在这个范围之中。它接受两个参数，分别为最小值和最大值。</p>
+<h6 id="5-auto-关键字"><a href="#5-auto-关键字" class="headerlink" title="5.auto 关键字"></a>5.auto 关键字</h6><p>auto关键字表示由浏览器自己决定长度。</p>
+<h6 id="6-网格线的名称"><a href="#6-网格线的名称" class="headerlink" title="6.网格线的名称"></a>6.网格线的名称</h6><p>grid-template-columns属性和grid-template-rows属性里面，还可以使用方括号，指定每一根网格线的名字，方便以后的引用。</p>
+<h3 id="项目属性"><a href="#项目属性" class="headerlink" title="项目属性"></a>项目属性</h3><h5 id="grid-column-row属性"><a href="#grid-column-row属性" class="headerlink" title="grid-column/row属性"></a>grid-column/row属性</h5><ul>
+<li>grid-column-start属性：左边框所在的垂直网格线</li>
+<li>grid-column-end属性：右边框所在的垂直网格线</li>
+<li>grid-row-start属性：上边框所在的水平网格线</li>
+<li>grid-row-end属性：下边框所在的水平网格线<br>通过设置参数达到一个item占据几个单元格的效果</li>
+</ul>
+<p>grid-column属性是grid-column-start和grid-column-end的合并简写形式，grid-row属性是grid-row-start属性和grid-row-end的合并简写形式。</p>
+<ul>
+<li>grid-column: start-line | end-line;</li>
+<li>grid-row: start-line | end-line;<h5 id="grid-area-属性"><a href="#grid-area-属性" class="headerlink" title="grid-area 属性"></a>grid-area 属性</h5>grid-area属性指定项目放在哪一个区域。参数为grid-template-areas定义的区域名。</li>
+</ul>
+<p>grid-area属性还可用作grid-row-start、grid-column-start、grid-row-end、grid-column-end的合并简写形式，直接指定项目的位置。grid-area: row-start | column-start | row-end | column-end;</p>
+<h5 id="justify-self-属性，"><a href="#justify-self-属性，" class="headerlink" title="justify-self 属性，"></a>justify-self 属性，</h5><p>align-self 属性，<br>place-self 属性<br>justify-self属性设置单元格内容的水平位置（左中右），跟justify-items属性的用法完全一致，但只作用于单个项目。</p>
+<p>align-self属性设置单元格内容的垂直位置（上中下），跟align-items属性的用法完全一致，也是只作用于单个项目。这个和flex布局类似，也不赘述。</p>
 
       
     </div>
