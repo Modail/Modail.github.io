@@ -155,6 +155,117 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/17/js%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Modail">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Modail's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/17/js%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-title-link" itemprop="url">js的数据类型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-02-17 19:43:57 / Modified: 22:13:46" itemprop="dateCreated datePublished" datetime="2021-02-17T19:43:57+08:00">2021-02-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="js的数据类型"><a href="#js的数据类型" class="headerlink" title="js的数据类型"></a>js的数据类型</h4><h6 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h6><p>我认为学习前端很重要的一部分就是对基本概念的理解，盲目的去学习新东西对于现阶段的我(基础不是很牢固)并不是最好的选择。校招许多时候面试官更看重的是面试者的基础，因为有了扎实的基础才能更快的适应和学习新的知识。我接下来的文章，将会不断涉及自己不太牢固的知识。</p>
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h5 id="一、undefined"><a href="#一、undefined" class="headerlink" title="一、undefined"></a>一、undefined</h5><p>在 JavaScript 中，没有值的变量，其值是 undefined。typeof 也返回 undefined</p>
+<h5 id="二、null"><a href="#二、null" class="headerlink" title="二、null"></a>二、null</h5><p>在 JavaScript 中，null 是 “nothing”。它被看做不存在的事物。不幸的是，在 JavaScript 中，null 的数据类型是*对象(typeof(null)==object)。</p>
+<p>可以通过设置值为 null 清空对象，此时，对象值为null，数据类型为null；<br>也可以通过设置值为 undefined 清空对象，此时，对象值为undefined，数据类型为undefined；</p>
+<p>从中可以看出，undefined和null的区别：</p>
+<p>Undefined 与 null 的值相等，但类型不相等。即null === undefined 为 false<br>null == undefined 为true。</p>
+<h5 id="三、number"><a href="#三、number" class="headerlink" title="三、number"></a>三、number</h5><p>数值类型很常见也不多说，但超大或超小的数值一般用科学计数法来写</p>
+<h5 id="四、string"><a href="#四、string" class="headerlink" title="四、string"></a>四、string</h5><p>字符串类型虽然常见，但是要注意内外的引号不能相同</p>
+<h5 id="五、boolean"><a href="#五、boolean" class="headerlink" title="五、boolean"></a>五、boolean</h5><p>布尔值类型就两个值，true和false</p>
+<h5 id="六、symbol"><a href="#六、symbol" class="headerlink" title="六、symbol"></a>六、symbol</h5><p>symbol是在ES6中新引入的一种新的原始数据类型，表示独一无二的值。</p>
+<h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><h5 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h5><p>数组类型，JavaScript 数组用方括号书写，数组的项目由逗号分隔。例如：var p=[1,2,3]</p>
+<h5 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h5><p>JavaScript 对象用花括号来书写。对象属性是 name:value 对，由逗号分隔。例如：var p ={firstname:”qu”}</p>
+<p>在 JavaScript 中，几乎“所有事物”都是对象。</p>
+<ul>
+<li>布尔是对象（如果用 new 关键词定义）</li>
+<li>数字是对象（如果用 new 关键词定义）</li>
+<li>字符串是对象（如果用 new 关键词定义）</li>
+<li>日期永远都是对象</li>
+<li>算术永远都是对象</li>
+<li>正则表达式永远都是对象</li>
+<li>数组永远都是对象</li>
+<li>函数永远都是对象</li>
+<li>对象永远都是对象</li>
+</ul>
+<p>所有 JavaScript 值，除了原始值，都是对象。</p>
+<h6 id="JavaScript-原始值"><a href="#JavaScript-原始值" class="headerlink" title="JavaScript 原始值"></a>JavaScript 原始值</h6><p>原始值指的是没有属性或方法的值；<br>原始数据类型指的是拥有原始值的数据。</p>
+<p>JavaScript 定义了 6 种原始数据类型：</p>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined</li>
+<li>symbol(symbol是在ES6中新引入的一种新的原始数据类型)</li>
+</ul>
+<p>原始值是一成不变的（它们是硬编码的，因此不能改变）。</p>
+<h5 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h5><p>关于函数，将在之后的文章做更深入的剖析。</p>
+<h4 id="typeof运算符"><a href="#typeof运算符" class="headerlink" title="typeof运算符"></a>typeof运算符</h4><p>JavaScript的 typeof 用来确定 JavaScript 变量的类型；</p>
+<h5 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h5><p>原始数据值是一种没有额外属性和方法的单一简单数据值。typeof 运算符可返回以下原始类型之一：</p>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>undefined</li>
+<li>symbol</li>
+</ul>
+<h5 id="复杂数据"><a href="#复杂数据" class="headerlink" title="复杂数据"></a>复杂数据</h5><p>typeof 运算符可返回以下两种类型之一：</p>
+<ul>
+<li>function</li>
+<li>object</li>
+</ul>
+<p>typeof 运算符把对象、数组或 null 返回 object。(typeof 运算符把数组返回为 “object”，因为在 JavaScript 中数组即对象。而null是因为上文提到的null的数据类型在js中不幸的是object)</p>
+<p>typeof 运算符不会把函数返回 object，而是返回funtion。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/14/Promise%E5%88%86%E6%9E%90%E5%92%8C%E5%A4%8D%E7%8E%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -526,7 +637,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

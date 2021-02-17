@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.jpg">
+  <link rel="mask-icon" href="/images/favicon.jpg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="js的数据类型前言我认为学习前端很重要的一部分就是对基本概念的理解，盲目的去学习新东西对于现阶段的我(基础不是很牢固)并不是最好的选择。校招许多时候面试官更看重的是面试者的基础，因为有了扎实的基础才能更快的适应和学习新的知识。我接下来的文章，将会不断涉及自己不太牢固的知识。 基本数据类型一、undefined在 JavaScript 中，没有值的变量，其值是 undefined。typeof 也返">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js的数据类型">
+<meta property="og:url" content="http://example.com/2021/02/17/js%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Modail&#39;s blog">
+<meta property="og:description" content="js的数据类型前言我认为学习前端很重要的一部分就是对基本概念的理解，盲目的去学习新东西对于现阶段的我(基础不是很牢固)并不是最好的选择。校招许多时候面试官更看重的是面试者的基础，因为有了扎实的基础才能更快的适应和学习新的知识。我接下来的文章，将会不断涉及自己不太牢固的知识。 基本数据类型一、undefined在 JavaScript 中，没有值的变量，其值是 undefined。typeof 也返">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-17T11:43:57.000Z">
+<meta property="article:modified_time" content="2021-02-17T14:13:46.613Z">
+<meta property="article:author" content="Modail">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/02/17/js%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>js的数据类型 | Modail's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Modail's blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/17/js%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Modail">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Modail's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          js的数据类型
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-02-17 19:43:57 / Modified: 22:13:46" itemprop="dateCreated datePublished" datetime="2021-02-17T19:43:57+08:00">2021-02-17</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="js的数据类型"><a href="#js的数据类型" class="headerlink" title="js的数据类型"></a>js的数据类型</h4><h6 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h6><p>我认为学习前端很重要的一部分就是对基本概念的理解，盲目的去学习新东西对于现阶段的我(基础不是很牢固)并不是最好的选择。校招许多时候面试官更看重的是面试者的基础，因为有了扎实的基础才能更快的适应和学习新的知识。我接下来的文章，将会不断涉及自己不太牢固的知识。</p>
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><h5 id="一、undefined"><a href="#一、undefined" class="headerlink" title="一、undefined"></a>一、undefined</h5><p>在 JavaScript 中，没有值的变量，其值是 undefined。typeof 也返回 undefined</p>
+<h5 id="二、null"><a href="#二、null" class="headerlink" title="二、null"></a>二、null</h5><p>在 JavaScript 中，null 是 “nothing”。它被看做不存在的事物。不幸的是，在 JavaScript 中，null 的数据类型是*对象(typeof(null)==object)。</p>
+<p>可以通过设置值为 null 清空对象，此时，对象值为null，数据类型为null；<br>也可以通过设置值为 undefined 清空对象，此时，对象值为undefined，数据类型为undefined；</p>
+<p>从中可以看出，undefined和null的区别：</p>
+<p>Undefined 与 null 的值相等，但类型不相等。即null === undefined 为 false<br>null == undefined 为true。</p>
+<h5 id="三、number"><a href="#三、number" class="headerlink" title="三、number"></a>三、number</h5><p>数值类型很常见也不多说，但超大或超小的数值一般用科学计数法来写</p>
+<h5 id="四、string"><a href="#四、string" class="headerlink" title="四、string"></a>四、string</h5><p>字符串类型虽然常见，但是要注意内外的引号不能相同</p>
+<h5 id="五、boolean"><a href="#五、boolean" class="headerlink" title="五、boolean"></a>五、boolean</h5><p>布尔值类型就两个值，true和false</p>
+<h5 id="六、symbol"><a href="#六、symbol" class="headerlink" title="六、symbol"></a>六、symbol</h5><p>symbol是在ES6中新引入的一种新的原始数据类型，表示独一无二的值。</p>
+<h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><h5 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h5><p>数组类型，JavaScript 数组用方括号书写，数组的项目由逗号分隔。例如：var p=[1,2,3]</p>
+<h5 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h5><p>JavaScript 对象用花括号来书写。对象属性是 name:value 对，由逗号分隔。例如：var p ={firstname:”qu”}</p>
+<p>在 JavaScript 中，几乎“所有事物”都是对象。</p>
+<ul>
+<li>布尔是对象（如果用 new 关键词定义）</li>
+<li>数字是对象（如果用 new 关键词定义）</li>
+<li>字符串是对象（如果用 new 关键词定义）</li>
+<li>日期永远都是对象</li>
+<li>算术永远都是对象</li>
+<li>正则表达式永远都是对象</li>
+<li>数组永远都是对象</li>
+<li>函数永远都是对象</li>
+<li>对象永远都是对象</li>
+</ul>
+<p>所有 JavaScript 值，除了原始值，都是对象。</p>
+<h6 id="JavaScript-原始值"><a href="#JavaScript-原始值" class="headerlink" title="JavaScript 原始值"></a>JavaScript 原始值</h6><p>原始值指的是没有属性或方法的值；<br>原始数据类型指的是拥有原始值的数据。</p>
+<p>JavaScript 定义了 6 种原始数据类型：</p>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>null</li>
+<li>undefined</li>
+<li>symbol(symbol是在ES6中新引入的一种新的原始数据类型)</li>
+</ul>
+<p>原始值是一成不变的（它们是硬编码的，因此不能改变）。</p>
+<h5 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h5><p>关于函数，将在之后的文章做更深入的剖析。</p>
+<h4 id="typeof运算符"><a href="#typeof运算符" class="headerlink" title="typeof运算符"></a>typeof运算符</h4><p>JavaScript的 typeof 用来确定 JavaScript 变量的类型；</p>
+<h5 id="原始数据"><a href="#原始数据" class="headerlink" title="原始数据"></a>原始数据</h5><p>原始数据值是一种没有额外属性和方法的单一简单数据值。typeof 运算符可返回以下原始类型之一：</p>
+<ul>
+<li>string</li>
+<li>number</li>
+<li>boolean</li>
+<li>undefined</li>
+<li>symbol</li>
+</ul>
+<h5 id="复杂数据"><a href="#复杂数据" class="headerlink" title="复杂数据"></a>复杂数据</h5><p>typeof 运算符可返回以下两种类型之一：</p>
+<ul>
+<li>function</li>
+<li>object</li>
+</ul>
+<p>typeof 运算符把对象、数组或 null 返回 object。(typeof 运算符把数组返回为 “object”，因为在 JavaScript 中数组即对象。而null是因为上文提到的null的数据类型在js中不幸的是object)</p>
+<p>typeof 运算符不会把函数返回 object，而是返回funtion。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/14/Promise%E5%88%86%E6%9E%90%E5%92%8C%E5%A4%8D%E7%8E%B0/" rel="prev" title="Promise分析和复现">
+      <i class="fa fa-chevron-left"></i> Promise分析和复现
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#js%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">js的数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.0.1.</span> <span class="nav-text">前言</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number"></span> <span class="nav-text">基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%80%E3%80%81undefined"><span class="nav-number">0.1.</span> <span class="nav-text">一、undefined</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%8C%E3%80%81null"><span class="nav-number">0.2.</span> <span class="nav-text">二、null</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%89%E3%80%81number"><span class="nav-number">0.3.</span> <span class="nav-text">三、number</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%9B%9B%E3%80%81string"><span class="nav-number">0.4.</span> <span class="nav-text">四、string</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%BA%94%E3%80%81boolean"><span class="nav-number">0.5.</span> <span class="nav-text">五、boolean</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%85%AD%E3%80%81symbol"><span class="nav-number">0.6.</span> <span class="nav-text">六、symbol</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number"></span> <span class="nav-text">引用数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">0.1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1"><span class="nav-number">0.2.</span> <span class="nav-text">对象</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#JavaScript-%E5%8E%9F%E5%A7%8B%E5%80%BC"><span class="nav-number">0.2.1.</span> <span class="nav-text">JavaScript 原始值</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-number">0.3.</span> <span class="nav-text">函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#typeof%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-number">1.</span> <span class="nav-text">typeof运算符</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE"><span class="nav-number">1.1.</span> <span class="nav-text">原始数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE"><span class="nav-number">1.2.</span> <span class="nav-text">复杂数据</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Modail"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">Modail</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/modail" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;modail" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class=""></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Modail</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
