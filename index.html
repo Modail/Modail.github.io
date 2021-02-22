@@ -155,6 +155,84 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/22/svg%E5%92%8Cclip-path/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Modail">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Modail's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/22/svg%E5%92%8Cclip-path/" class="post-title-link" itemprop="url">svg和clip-path</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-02-22 23:12:08 / Modified: 23:50:40" itemprop="dateCreated datePublished" datetime="2021-02-22T23:12:08+08:00">2021-02-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h4><h5 id="SVG是什么"><a href="#SVG是什么" class="headerlink" title="SVG是什么"></a>SVG是什么</h5><p>SVG（Scalable Vector Graphics） 即可伸缩矢量图形；</p>
+<ul>
+<li>SVG 用来定义用于网络的基于矢量的图形</li>
+<li>SVG 使用 XML 格式定义图形</li>
+<li>SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失<h5 id="SVG的优点"><a href="#SVG的优点" class="headerlink" title="SVG的优点"></a>SVG的优点</h5></li>
+<li>SVG 可被非常多的工具读取和修改（比如记事本）</li>
+<li>SVG 与 JPEG 和 GIF 图像比起来，尺寸更小，且可压缩性更强。</li>
+<li>SVG 是可伸缩的</li>
+<li>SVG 图像可在任何的分辨率下被高质量地打印 (以上是最为重要的优点)</li>
+<li>SVG 可在图像质量不下降的情况下被放大</li>
+<li>SVG 图像中的文本是可选的，同时也是可搜索的（很适合制作地图）【text属性】</li>
+<li>SVG 可以与 Java 技术一起运行</li>
+<li>SVG 是开放的标准</li>
+<li>SVG 文件是纯粹的 XML</li>
+</ul>
+<h4 id="clip-path"><a href="#clip-path" class="headerlink" title="clip-path"></a>clip-path</h4><p>clip-path是css3中的一个属性，使用裁剪方式创建元素的可显示区域。区域内的部分显示，区域外的隐藏。</p>
+<h5 id="为什么打算写关于clip-path属性的文章"><a href="#为什么打算写关于clip-path属性的文章" class="headerlink" title="为什么打算写关于clip-path属性的文章"></a>为什么打算写关于clip-path属性的文章</h5><p>最近在准备面试，看面经的时候，大概率出现了怎么用css实现三角形等问题，而网上的回答也比较集中在使用border来控制，然后设置width、height为0，实现其他的图形就用transform来位进行拼凑。</p>
+<p>我也不否认这种方法，但是我觉得一个问题就应该去探索，clip=path作为一个功能强大的css属性应该被记起。clip-path基于svg，因此svg能实现的图形clip-path基本上都能实现。</p>
+<h5 id="clip-path语法"><a href="#clip-path语法" class="headerlink" title="clip-path语法"></a>clip-path语法</h5><p>前面提到了clip-path基于svg，因此cilp-path的属性和svg类似，但是用法不一样。<br>这里重点讲讲polygon()和path()</p>
+<h6 id="polygon"><a href="#polygon" class="headerlink" title="polygon()"></a>polygon()</h6><p>polygon是用来实现多边形的属性，参数是坐标点，拥有相同数量的参数可以实现动画效果，这也是clip-path强大的一个原因。polygon的坐标是以左上角为原点计算。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/18/HTML%E7%9A%84DOM%E6%93%8D%E4%BD%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -715,7 +793,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

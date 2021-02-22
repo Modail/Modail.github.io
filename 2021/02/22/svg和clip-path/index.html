@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="DOM操作之前我问过舍友(在我看来前端很厉害的一个人)这个问题，他说DOM的操作无外乎就是增删查改，再多一点就是对DOM节点添加一些事件。我想了一下，确实没什么问题，毕竟无论是什么样的结构(比如数组、链表、类等等)，增删改查都是最基础和最重要的操作。 增加DOM节点在我和我舍友看来，DOM操作最常使用到的就是添加节点，这时候element.appendchild()就显得尤为重要。在添加DOM节点">
+  <meta name="description" content="SVGSVG是什么SVG（Scalable Vector Graphics） 即可伸缩矢量图形；  SVG 用来定义用于网络的基于矢量的图形 SVG 使用 XML 格式定义图形 SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失SVG的优点 SVG 可被非常多的工具读取和修改（比如记事本） SVG 与 JPEG 和 GIF 图像比起来，尺寸更小，且可压缩性更强。 SVG 是可伸缩的 SVG">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML的DOM操作">
-<meta property="og:url" content="http://example.com/2021/02/18/HTML%E7%9A%84DOM%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="svg和clip-path">
+<meta property="og:url" content="http://example.com/2021/02/22/svg%E5%92%8Cclip-path/index.html">
 <meta property="og:site_name" content="Modail&#39;s blog">
-<meta property="og:description" content="DOM操作之前我问过舍友(在我看来前端很厉害的一个人)这个问题，他说DOM的操作无外乎就是增删查改，再多一点就是对DOM节点添加一些事件。我想了一下，确实没什么问题，毕竟无论是什么样的结构(比如数组、链表、类等等)，增删改查都是最基础和最重要的操作。 增加DOM节点在我和我舍友看来，DOM操作最常使用到的就是添加节点，这时候element.appendchild()就显得尤为重要。在添加DOM节点">
+<meta property="og:description" content="SVGSVG是什么SVG（Scalable Vector Graphics） 即可伸缩矢量图形；  SVG 用来定义用于网络的基于矢量的图形 SVG 使用 XML 格式定义图形 SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失SVG的优点 SVG 可被非常多的工具读取和修改（比如记事本） SVG 与 JPEG 和 GIF 图像比起来，尺寸更小，且可压缩性更强。 SVG 是可伸缩的 SVG">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-02-18T15:11:01.000Z">
-<meta property="article:modified_time" content="2021-02-19T15:29:42.552Z">
+<meta property="article:published_time" content="2021-02-22T15:12:08.000Z">
+<meta property="article:modified_time" content="2021-02-22T15:50:40.534Z">
 <meta property="article:author" content="Modail">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/02/18/HTML%E7%9A%84DOM%E6%93%8D%E4%BD%9C/">
+<link rel="canonical" href="http://example.com/2021/02/22/svg%E5%92%8Cclip-path/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>HTML的DOM操作 | Modail's blog</title>
+  <title>svg和clip-path | Modail's blog</title>
   
 
 
@@ -160,7 +160,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/18/HTML%E7%9A%84DOM%E6%93%8D%E4%BD%9C/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/22/svg%E5%92%8Cclip-path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/header.jpg">
@@ -173,7 +173,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          HTML的DOM操作
+          svg和clip-path
         </h1>
 
         <div class="post-meta">
@@ -182,16 +182,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-02-18 23:11:01" itemprop="dateCreated datePublished" datetime="2021-02-18T23:11:01+08:00">2021-02-18</time>
+              <time title="Created: 2021-02-22 23:12:08 / Modified: 23:50:40" itemprop="dateCreated datePublished" datetime="2021-02-22T23:12:08+08:00">2021-02-22</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-19 23:29:42" itemprop="dateModified" datetime="2021-02-19T23:29:42+08:00">2021-02-19</time>
-              </span>
 
           
 
@@ -204,9 +198,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h4 id="DOM操作"><a href="#DOM操作" class="headerlink" title="DOM操作"></a>DOM操作</h4><p>之前我问过舍友(在我看来前端很厉害的一个人)这个问题，他说DOM的操作无外乎就是增删查改，再多一点就是对DOM节点添加一些事件。我想了一下，确实没什么问题，毕竟无论是什么样的结构(比如数组、链表、类等等)，增删改查都是最基础和最重要的操作。</p>
-<h5 id="增加DOM节点"><a href="#增加DOM节点" class="headerlink" title="增加DOM节点"></a>增加DOM节点</h5><p>在我和我舍友看来，DOM操作最常使用到的就是添加节点，这时候element.appendchild()就显得尤为重要。在添加DOM节点前得先创建节点(element.createElement)。</p>
-<h5 id="删除DOM节点"><a href="#删除DOM节点" class="headerlink" title="删除DOM节点"></a>删除DOM节点</h5>
+        <h4 id="SVG"><a href="#SVG" class="headerlink" title="SVG"></a>SVG</h4><h5 id="SVG是什么"><a href="#SVG是什么" class="headerlink" title="SVG是什么"></a>SVG是什么</h5><p>SVG（Scalable Vector Graphics） 即可伸缩矢量图形；</p>
+<ul>
+<li>SVG 用来定义用于网络的基于矢量的图形</li>
+<li>SVG 使用 XML 格式定义图形</li>
+<li>SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失<h5 id="SVG的优点"><a href="#SVG的优点" class="headerlink" title="SVG的优点"></a>SVG的优点</h5></li>
+<li>SVG 可被非常多的工具读取和修改（比如记事本）</li>
+<li>SVG 与 JPEG 和 GIF 图像比起来，尺寸更小，且可压缩性更强。</li>
+<li>SVG 是可伸缩的</li>
+<li>SVG 图像可在任何的分辨率下被高质量地打印 (以上是最为重要的优点)</li>
+<li>SVG 可在图像质量不下降的情况下被放大</li>
+<li>SVG 图像中的文本是可选的，同时也是可搜索的（很适合制作地图）【text属性】</li>
+<li>SVG 可以与 Java 技术一起运行</li>
+<li>SVG 是开放的标准</li>
+<li>SVG 文件是纯粹的 XML</li>
+</ul>
+<h4 id="clip-path"><a href="#clip-path" class="headerlink" title="clip-path"></a>clip-path</h4><p>clip-path是css3中的一个属性，使用裁剪方式创建元素的可显示区域。区域内的部分显示，区域外的隐藏。</p>
+<h5 id="为什么打算写关于clip-path属性的文章"><a href="#为什么打算写关于clip-path属性的文章" class="headerlink" title="为什么打算写关于clip-path属性的文章"></a>为什么打算写关于clip-path属性的文章</h5><p>最近在准备面试，看面经的时候，大概率出现了怎么用css实现三角形等问题，而网上的回答也比较集中在使用border来控制，然后设置width、height为0，实现其他的图形就用transform来位进行拼凑。</p>
+<p>我也不否认这种方法，但是我觉得一个问题就应该去探索，clip=path作为一个功能强大的css属性应该被记起。clip-path基于svg，因此svg能实现的图形clip-path基本上都能实现。</p>
+<h5 id="clip-path语法"><a href="#clip-path语法" class="headerlink" title="clip-path语法"></a>clip-path语法</h5><p>前面提到了clip-path基于svg，因此cilp-path的属性和svg类似，但是用法不一样。<br>这里重点讲讲polygon()和path()</p>
+<h6 id="polygon"><a href="#polygon" class="headerlink" title="polygon()"></a>polygon()</h6><p>polygon是用来实现多边形的属性，参数是坐标点，拥有相同数量的参数可以实现动画效果，这也是clip-path强大的一个原因。polygon的坐标是以左上角为原点计算。</p>
+
     </div>
 
     
@@ -221,13 +233,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/02/17/js%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="prev" title="js的数据类型">
-      <i class="fa fa-chevron-left"></i> js的数据类型
+    <a href="/2021/02/18/HTML%E7%9A%84DOM%E6%93%8D%E4%BD%9C/" rel="prev" title="HTML的DOM操作">
+      <i class="fa fa-chevron-left"></i> HTML的DOM操作
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/02/22/svg%E5%92%8Cclip-path/" rel="next" title="svg和clip-path">
-      svg和clip-path <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -286,7 +295,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#DOM%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">DOM操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0DOM%E8%8A%82%E7%82%B9"><span class="nav-number">1.1.</span> <span class="nav-text">增加DOM节点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%A0%E9%99%A4DOM%E8%8A%82%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">删除DOM节点</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#SVG"><span class="nav-number">1.</span> <span class="nav-text">SVG</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SVG%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.</span> <span class="nav-text">SVG是什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SVG%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">SVG的优点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clip-path"><span class="nav-number">2.</span> <span class="nav-text">clip-path</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%89%93%E7%AE%97%E5%86%99%E5%85%B3%E4%BA%8Eclip-path%E5%B1%9E%E6%80%A7%E7%9A%84%E6%96%87%E7%AB%A0"><span class="nav-number">2.1.</span> <span class="nav-text">为什么打算写关于clip-path属性的文章</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#clip-path%E8%AF%AD%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">clip-path语法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#polygon"><span class="nav-number">2.2.1.</span> <span class="nav-text">polygon()</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
