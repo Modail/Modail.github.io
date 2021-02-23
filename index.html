@@ -155,6 +155,64 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/23/js%E5%8D%95%E7%BA%BF%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Modail">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Modail's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/23/js%E5%8D%95%E7%BA%BF%E7%A8%8B/" class="post-title-link" itemprop="url">post</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-02-23 23:51:24 / Modified: 23:53:30" itemprop="dateCreated datePublished" datetime="2021-02-23T23:51:24+08:00">2021-02-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="js是单线程的"><a href="#js是单线程的" class="headerlink" title="js是单线程的"></a>js是单线程的</h4>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/22/svg%E5%92%8Cclip-path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -178,10 +236,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-02-22 23:12:08 / Modified: 23:50:40" itemprop="dateCreated datePublished" datetime="2021-02-22T23:12:08+08:00">2021-02-22</time>
+              <time title="Created: 2021-02-22 23:12:08" itemprop="dateCreated datePublished" datetime="2021-02-22T23:12:08+08:00">2021-02-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-23 23:50:51" itemprop="dateModified" datetime="2021-02-23T23:50:51+08:00">2021-02-23</time>
+              </span>
 
           
 
@@ -214,6 +278,7 @@
 <p>我也不否认这种方法，但是我觉得一个问题就应该去探索，clip=path作为一个功能强大的css属性应该被记起。clip-path基于svg，因此svg能实现的图形clip-path基本上都能实现。</p>
 <h5 id="clip-path语法"><a href="#clip-path语法" class="headerlink" title="clip-path语法"></a>clip-path语法</h5><p>前面提到了clip-path基于svg，因此cilp-path的属性和svg类似，但是用法不一样。<br>这里重点讲讲polygon()和path()</p>
 <h6 id="polygon"><a href="#polygon" class="headerlink" title="polygon()"></a>polygon()</h6><p>polygon是用来实现多边形的属性，参数是坐标点，拥有相同数量的参数可以实现动画效果，这也是clip-path强大的一个原因。polygon的坐标是以左上角为原点计算。</p>
+<h6 id="path"><a href="#path" class="headerlink" title="path()"></a>path()</h6><p>path语法在svg的使用中十分重要，同样在clip-path上也是不可忽略的，path等定义了裁剪的路线，使得css可以获得不规则的图形</p>
 
       
     </div>
@@ -793,7 +858,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

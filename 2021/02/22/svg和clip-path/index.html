@@ -28,7 +28,7 @@
 <meta property="og:description" content="SVGSVG是什么SVG（Scalable Vector Graphics） 即可伸缩矢量图形；  SVG 用来定义用于网络的基于矢量的图形 SVG 使用 XML 格式定义图形 SVG 图像在放大或改变尺寸的情况下其图形质量不会有所损失SVG的优点 SVG 可被非常多的工具读取和修改（比如记事本） SVG 与 JPEG 和 GIF 图像比起来，尺寸更小，且可压缩性更强。 SVG 是可伸缩的 SVG">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-22T15:12:08.000Z">
-<meta property="article:modified_time" content="2021-02-22T15:50:40.534Z">
+<meta property="article:modified_time" content="2021-02-23T15:50:51.952Z">
 <meta property="article:author" content="Modail">
 <meta name="twitter:card" content="summary">
 
@@ -182,10 +182,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-02-22 23:12:08 / Modified: 23:50:40" itemprop="dateCreated datePublished" datetime="2021-02-22T23:12:08+08:00">2021-02-22</time>
+              <time title="Created: 2021-02-22 23:12:08" itemprop="dateCreated datePublished" datetime="2021-02-22T23:12:08+08:00">2021-02-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-02-23 23:50:51" itemprop="dateModified" datetime="2021-02-23T23:50:51+08:00">2021-02-23</time>
+              </span>
 
           
 
@@ -218,6 +224,7 @@
 <p>我也不否认这种方法，但是我觉得一个问题就应该去探索，clip=path作为一个功能强大的css属性应该被记起。clip-path基于svg，因此svg能实现的图形clip-path基本上都能实现。</p>
 <h5 id="clip-path语法"><a href="#clip-path语法" class="headerlink" title="clip-path语法"></a>clip-path语法</h5><p>前面提到了clip-path基于svg，因此cilp-path的属性和svg类似，但是用法不一样。<br>这里重点讲讲polygon()和path()</p>
 <h6 id="polygon"><a href="#polygon" class="headerlink" title="polygon()"></a>polygon()</h6><p>polygon是用来实现多边形的属性，参数是坐标点，拥有相同数量的参数可以实现动画效果，这也是clip-path强大的一个原因。polygon的坐标是以左上角为原点计算。</p>
+<h6 id="path"><a href="#path" class="headerlink" title="path()"></a>path()</h6><p>path语法在svg的使用中十分重要，同样在clip-path上也是不可忽略的，path等定义了裁剪的路线，使得css可以获得不规则的图形</p>
 
     </div>
 
@@ -236,7 +243,10 @@
     <a href="/2021/02/18/HTML%E7%9A%84DOM%E6%93%8D%E4%BD%9C/" rel="prev" title="HTML的DOM操作">
       <i class="fa fa-chevron-left"></i> HTML的DOM操作
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/02/23/js%E5%8D%95%E7%BA%BF%E7%A8%8B/" rel="next" title="post">
+      post <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -295,7 +305,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#SVG"><span class="nav-number">1.</span> <span class="nav-text">SVG</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SVG%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.</span> <span class="nav-text">SVG是什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SVG%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">SVG的优点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clip-path"><span class="nav-number">2.</span> <span class="nav-text">clip-path</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%89%93%E7%AE%97%E5%86%99%E5%85%B3%E4%BA%8Eclip-path%E5%B1%9E%E6%80%A7%E7%9A%84%E6%96%87%E7%AB%A0"><span class="nav-number">2.1.</span> <span class="nav-text">为什么打算写关于clip-path属性的文章</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#clip-path%E8%AF%AD%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">clip-path语法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#polygon"><span class="nav-number">2.2.1.</span> <span class="nav-text">polygon()</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#SVG"><span class="nav-number">1.</span> <span class="nav-text">SVG</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SVG%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.1.</span> <span class="nav-text">SVG是什么</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SVG%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">SVG的优点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clip-path"><span class="nav-number">2.</span> <span class="nav-text">clip-path</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%89%93%E7%AE%97%E5%86%99%E5%85%B3%E4%BA%8Eclip-path%E5%B1%9E%E6%80%A7%E7%9A%84%E6%96%87%E7%AB%A0"><span class="nav-number">2.1.</span> <span class="nav-text">为什么打算写关于clip-path属性的文章</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#clip-path%E8%AF%AD%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">clip-path语法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#polygon"><span class="nav-number">2.2.1.</span> <span class="nav-text">polygon()</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#path"><span class="nav-number">2.2.2.</span> <span class="nav-text">path()</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -311,7 +321,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
