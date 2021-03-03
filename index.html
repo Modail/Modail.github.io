@@ -460,7 +460,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-18 23:31:06" itemprop="dateModified" datetime="2021-02-18T23:31:06+08:00">2021-02-18</time>
+                <time title="Modified: 2021-03-03 23:34:00" itemprop="dateModified" datetime="2021-03-03T23:34:00+08:00">2021-03-03</time>
               </span>
 
           
@@ -527,6 +527,7 @@
 </ul>
 <p>typeof 运算符把对象、数组或 null 返回 object。(typeof 运算符把数组返回为 “object”，因为在 JavaScript 中数组即对象。而null是因为上文提到的null的数据类型在js中不幸的是object)</p>
 <p>typeof 运算符不会把函数返回 object，而是返回funtion。</p>
+<h6 id="ps-2021-03-03"><a href="#ps-2021-03-03" class="headerlink" title="ps(2021.03.03)"></a>ps(2021.03.03)</h6><p>最近重新看了一遍es6，发现了一些知识点的遗漏，js的数据类型还有Bigint，所以js的数据类型一共有Undefined、Null、Boolean、String、Number、Symbol(六种原始数据类型)、Object、Function（两种引用类型）、Bigint。一共8种数据类型。</p>
 
       
     </div>
@@ -649,7 +650,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-18 23:30:50" itemprop="dateModified" datetime="2021-02-18T23:30:50+08:00">2021-02-18</time>
+                <time title="Modified: 2021-03-03 23:01:55" itemprop="dateModified" datetime="2021-03-03T23:01:55+08:00">2021-03-03</time>
               </span>
 
           
@@ -676,6 +677,8 @@
 <li>每个对象拥有一个原型对象，通过 proto 指针指向其原型对象，并从中继承方法和属性，同时原型对象也可能拥有原型，这样一层一层，最终指向 null(Object.proptotype.__proto__指向的是null)。这种关系被称为原型链(prototype chain)，通过原型链一个对象可以拥有定义在其他对象中的属性和方法</li>
 <li>构造函数 Parent、Parent.prototype 和 实例 p 的关系如下:(p.<strong>proto</strong> === Parent.prototype)</li>
 </ol>
+<h6 id="ps（2021-03-03）"><a href="#ps（2021-03-03）" class="headerlink" title="ps（2021.03.03）"></a>ps（2021.03.03）</h6><p>最近在准备实习的事情，在cvte中笔试碰到了一个这样的题目：<br><img src="../images/prototype1.png"><br>刚刚看很容易被误导，认为输出的是B（原型链改变），但这个考的却是构造函数的this问题，a是通过构造函数A来生成的，构造函数的this指向a，所以a.name输出的依然是A.</p>
+<p>同时笔试中还出现了相似题目，但这次确实是考原型链<br><img src="../images/prototype2.png"><br>题目前面和刚刚是差不多的，这时他问的是A、B的显式原型(prototype)是否在a、b的原型链上，首先很重要的一点要知道与编译后代码执行的顺序，a是在构造函数A的prototype改变之前生成的，它的原型链是a-&gt;A{}-&gt;{}-&gt;null;但b是在构造函数A的prototype改变之后生成的，它的原型链是b-&gt;B{name:B}-&gt;B{}-&gt;{}-&gt;null;<br>但是instanceof的判断是在A.prototype改变后进行的，所以这时A.prototype(即B{name:B})并不在a的原型链上，返回false；同理得b返回的是true</p>
 
       
     </div>
