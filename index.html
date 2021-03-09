@@ -186,7 +186,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-03-07 23:51:44" itemprop="dateModified" datetime="2021-03-07T23:51:44+08:00">2021-03-07</time>
+                <time title="Modified: 2021-03-08 00:04:13" itemprop="dateModified" datetime="2021-03-08T00:04:13+08:00">2021-03-08</time>
               </span>
 
           
@@ -201,7 +201,7 @@
 
       
           <h5 id="判断对象类型"><a href="#判断对象类型" class="headerlink" title="判断对象类型"></a>判断对象类型</h5><h6 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h6><p>typeof只能判断区分基本类型，number、string、boolean、undefined、symbol  和object,function；同时判断null时，返回的是object；无法区分数组和object</p>
-<h6 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h6><p>instanceof 判断的是某一个原型是否在一个实例对象的原型链上(或者表达为某个对象是不是某个原型的实例);原始数据都不能判断，只有通过构造函数构造的实例才能判断，但是undefined、null都没有构造函数(仅仅是一个原始数据)，所以无法判断，而Symbol类型的prototype是undefined。但实际上通过构造函数生成的实例对象的原型链上都会存在Object,所以实际上是很难判断类型的。</p>
+<h6 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h6><p>instanceof 判断的是某一个原型是否在一个实例对象的原型链上(或者表达为某个对象是不是某个原型的实例);原始数据都不能判断，只有通过构造函数构造的实例才能判断，但是undefined、null都没有构造函数(仅仅是一个原始数据)，所以无法判断，而Symbol类型不行(原因还不清楚)。但实际上通过构造函数生成的实例对象的原型链上都会存在Object,所以实际上是很难判断类型的。</p>
 <h6 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h6><p>实际上通过constructor判断就必须得存在构造函数的类型，所以undefined、null都是判断不了的，</p>
 <h6 id="Object-prototype-toString-call-———最好用"><a href="#Object-prototype-toString-call-———最好用" class="headerlink" title="Object.prototype.toString.call()   ———最好用"></a>Object.prototype.toString.call()   ———最好用</h6><p>都可以判断</p>
 
@@ -246,10 +246,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-02-23 23:51:24 / Modified: 23:53:30" itemprop="dateCreated datePublished" datetime="2021-02-23T23:51:24+08:00">2021-02-23</time>
+              <time title="Created: 2021-02-23 23:51:24" itemprop="dateCreated datePublished" datetime="2021-02-23T23:51:24+08:00">2021-02-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-03-09 20:52:38" itemprop="dateModified" datetime="2021-03-09T20:52:38+08:00">2021-03-09</time>
+              </span>
 
           
 
@@ -262,7 +268,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h4 id="js是单线程的"><a href="#js是单线程的" class="headerlink" title="js是单线程的"></a>js是单线程的</h4>
+          <h4 id="js是单线程的"><a href="#js是单线程的" class="headerlink" title="js是单线程的"></a>js是单线程的</h4><h5 id="js引擎"><a href="#js引擎" class="headerlink" title="js引擎"></a>js引擎</h5><p>js是单线程的，这与js的设计初衷是相对应的，js主要是为了处理Dom的交互，如果js是多线程的，(会导致多事件并发)那么添加一个Dom节点，再删除相同的DOM节点，那么我们的交互将会变得复杂难以实现。</p>
+<h5 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h5><p>说到js是单线程的，就不能不提js的event loop，在js中有同步任务、异步任务的说法，同步任务进入主线程，在主线程上执行，形成一个“执行栈”；异步任务有了结果后，将一个事件放入到”任务队列”中；等到“执行栈”中的所有同步任务都完成了，在读取“任务队列”中的事件，这些事件结束等待，进入主线程(执行栈)开始执行，而这一步在主线程中是循环不断的(event loop)</p>
+
       
     </div>
 
